@@ -3,11 +3,13 @@
 from flask import Flask, request, jsonify, render_template
 import pickle
 import numpy as np
-
+import joblib
+import xgboost
 # Load the trained model
-model_path = 'model.pkl'
-with open(model_path, 'rb') as file:
-    model = pickle.load(file)
+
+
+# Load the model
+model = joblib.load("model.pkl")
 
 app = Flask(__name__)
 
