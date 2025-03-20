@@ -25,7 +25,7 @@ def predict():
     
     # Make prediction
     prediction = model.predict(final_features)
-    output = 'Placed' if prediction[0] == 1 else 'Not Placed'
+    output = 'Not Fake' if prediction[0] == 1 else 'Fake'
 
     return render_template('index.html', prediction_text='Prediction: {}'.format(output))
 
