@@ -5,13 +5,13 @@ import pickle
 import numpy as np
 import joblib
 import xgboost
-import randomforest
+from sklearn.ensemble import RandomForestClassifier
 
 
 # Load the trained models
 facebook_model = joblib.load("facebook_model.pkl")
-twitter_model = joblib.load("twitter_model.pkl")
-instagram_model = joblib.load("instagram_model.pkl")
+#twitter_model = joblib.load("twitter_model.pkl")
+#instagram_model = joblib.load("instagram_model.pkl")
 
 app = Flask(__name__)
 
